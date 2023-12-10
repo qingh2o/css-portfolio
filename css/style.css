@@ -5,8 +5,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  font-family: Poppins, sans-serif;
+  line-height: 2;
+}
+
+body, html {
+  height: 100%;
 }
 
 h1,
@@ -16,8 +20,220 @@ h4,
 h5,
 h6 {
   margin: 0;
+  
 }
 
-p {
-  margin: 0;
+/* ----header---- */
+header {
+padding: 15px 50px 15px 50px;
+}
+
+/*name and photo*/ 
+h1 {   
+display: inline-block;
+font-size: 35px;
+font-weight: 600;
+color: rgb(128, 126, 126);
+vertical-align: middle;
+}
+
+#photo {
+  margin: 10px;
+  vertical-align: middle;
+  border-radius: 10px;
+}
+ 
+/* nav */
+nav {
+float: right;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#nav-link {
+display: inline-block;
+margin-left: 25px;
+}
+
+a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4e5157;
+  text-decoration: none;
+}
+
+
+/* ----hero banner---- */
+.hero-banner {
+  /* The image used */
+  background-image: url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* Full height */
+  height: 26%;
+  margin: 20px 50px;
+  padding: 50px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: cursive, Times, serif;
+  background-color: white;
+  height: 100px;
+  max-width: 600px;
+  margin: auto;
+}
+
+
+
+/* main */
+.page-wrapper{
+  margin: 20px 50px;
+}
+
+
+/* ----About Me---- */
+#subHeading { 
+  text-align: center;
+  border-bottom: 4px solid #dbdbdb;
+  margin: 25px auto; 
+  max-width: 200px;
+}
+
+article {
+  margin: 30px auto;
+  text-align: center;
+  max-width: 850px;
+  font-size: 18px;
+}
+
+
+h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+/* ----Work---- */
+#portfolio-container {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 250px 250px 250px 250px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'surf-report surf-report'
+                       'surf-report surf-report'
+                       'led-wall calculator'
+                       'pastel-puzzels run-buddy';
+}
+
+.container {
+  margin: 10px;
+  border: 5px solid #dbdbdb;
+}
+
+#surf-report {
+  grid-area: surf-report;
+ }
+
+#surf-report .image-link {
+  background-image: url(../images/surf-report.jpg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#led-wall {
+  grid-area: led-wall;
+}
+
+#led-wall .image-link {
+  background-image: url(../images/led-wall.jpg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#calculator {
+  grid-area: calculator;
+}
+
+#calculator .image-link {
+  background-image: url(../images/calulator.jpg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#pastel-puzzels {
+  grid-area: pastel-puzzels;
+}
+
+#pastel-puzzels .image-link {
+  background-image: url(../images/pastel-puzzels.jpg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+#run-buddy {
+  grid-area: run-buddy;
+}
+
+#run-buddy .image-link {
+  background-image: url(../images/run-buddy.jpg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* image title */
+.title {
+  display: inline-block;
+  background-color: #dbdbdb;
+  padding: 10px;
+  z-index: 100;
+  position: absolute;
+}
+
+.subtitle {
+  font-size: 12px;
+}
+
+
+/* ----Contact---- */
+
+#contact {
+  text-align: center;
+}
+
+#information {
+  display: inline-block;
+  margin: 10px 25px 40px 25px;
+}
+  
+/* Interactive page */
+/* link hover */
+a:hover {
+  color: #7b8caf;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+
+/* image hover */
+.image-link:hover {
+  opacity: 0.6;
+  background: #cccbd3 0.2;
 }
