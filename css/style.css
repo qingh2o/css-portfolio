@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
+:root {
+ --grey: #dbdbdb;
+}
+
 body {
-  margin: 0;
+  margin: 15px 0px;
   padding: 0;
   font-family: Poppins, sans-serif;
   line-height: 2;
@@ -19,20 +23,19 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  
+  margin: 0;  
 }
 
 /* ----header---- */
 header {
-padding: 15px 50px 15px 50px;
+padding: 15px 50px 20px 50px;
 }
 
 /*name and photo*/ 
 h1 {   
 display: inline-block;
 font-size: 35px;
-font-weight: 600;
+font-weight: bold;
 color: rgb(128, 126, 126);
 vertical-align: middle;
 }
@@ -52,9 +55,10 @@ ul {
   list-style-type: none;
 }
 
-#nav-link {
+.nav-link {
 display: inline-block;
 margin-left: 25px;
+margin-top: 10px;
 }
 
 a {
@@ -64,61 +68,49 @@ a {
   text-decoration: none;
 }
 
-
-/* ----hero banner---- */
+/* ----Hero Banner Section---- */
 .hero-banner {
-  /* The image used */
+  width: 100%;
+  height: 200px;
   background-image: url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* Full height */
-  height: 26%;
-  margin: 20px 50px;
-  padding: 50px;
-  text-align: center;
+  padding: 40px;
 }
 
-.heading {
+.heading h2{
   font-size: 25px;
   font-weight: 400;
   font-family: cursive, Times, serif;
   background-color: white;
-  height: 100px;
   max-width: 600px;
-  margin: auto;
+  margin: auto; 
+  padding: 5px;
 }
-
-
 
 /* main */
 .page-wrapper{
-  margin: 20px 50px;
+  margin: 20px 0px;
 }
-
-
-/* ----About Me---- */
-#subHeading { 
-  text-align: center;
-  border-bottom: 4px solid #dbdbdb;
-  margin: 25px auto; 
-  max-width: 200px;
-}
-
-article {
-  margin: 30px auto;
-  text-align: center;
-  max-width: 850px;
-  font-size: 18px;
-}
-
 
 h2 {
   font-size: 32px;
   font-weight: 300;
+  text-align: center;
+  margin: 25px auto 10px; 
 }
 
-/* ----Work---- */
+/* ----About Me Section---- */
+#about-content {
+  margin: auto;
+  text-align: center;
+  max-width: 1000px;
+  font-size: 18px;
+  padding: 0 50px;
+}
+
+/* ----Work Section---- */
 #portfolio-container {
   margin: 0px 5%;
   display: grid;
@@ -130,77 +122,41 @@ h2 {
                        'pastel-puzzels run-buddy';
 }
 
-.container {
-  margin: 10px;
-  border: 5px solid #dbdbdb;
-}
-
 #surf-report {
   grid-area: surf-report;
  }
 
-#surf-report .image-link {
-  background-image: url(../images/surf-report.jpg);
-  background-repeat: no-repeat;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 #led-wall {
   grid-area: led-wall;
-}
-
-#led-wall .image-link {
-  background-image: url(../images/led-wall.jpg);
-  background-repeat: no-repeat;
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 #calculator {
   grid-area: calculator;
 }
 
-#calculator .image-link {
-  background-image: url(../images/calulator.jpg);
-  background-repeat: no-repeat;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 #pastel-puzzels {
   grid-area: pastel-puzzels;
 }
-
-#pastel-puzzels .image-link {
-  background-image: url(../images/pastel-puzzels.jpg);
-  background-repeat: no-repeat;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 
 #run-buddy {
   grid-area: run-buddy;
 }
 
-#run-buddy .image-link {
-  background-image: url(../images/run-buddy.jpg);
-  background-repeat: no-repeat;
-  display: block;
-  width: 100%;
-  height: 100%;
+/* image  */
+.container {
+  margin: 10px;
+  border: 5px solid var(--grey);
 }
 
+#portfolio-container img {
+  width: 100%;
+  height: 100%; 
+}
 
 /* image title */
 .title {
   display: inline-block;
-  background-color: #dbdbdb;
+  background-color: var(--grey);
   padding: 10px;
   z-index: 100;
   position: absolute;
@@ -210,22 +166,20 @@ h2 {
   font-size: 12px;
 }
 
-
-/* ----Contact---- */
-
+/* ----Contact section---- */
 #contact {
   text-align: center;
 }
 
-#information {
+.information {
   display: inline-block;
-  margin: 10px 25px 40px 25px;
+  margin: 0 25px 40px 25px;
 }
   
 /* Interactive page */
 /* link hover */
 a:hover {
-  color: #7b8caf;
+  color: #4579e9;
   font-weight: 600;
   text-decoration: underline;
   text-decoration-thickness: 3px;
@@ -234,6 +188,35 @@ a:hover {
 
 /* image hover */
 .image-link:hover {
-  opacity: 0.6;
-  background: #cccbd3 0.2;
+  opacity: 0.3;
 }
+
+/* responsive */
+@media screen and (min-width: 992px) {
+  header,
+  .page-section {
+    margin: auto;
+    width: 80%;
+  } 
+}
+
+@media screen and (max-width: 795px) {  
+  nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-banner {
+    line-height: 1.5;
+  }
+  #portfolio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container {
+    height: 250px;
+  }
+}
+
